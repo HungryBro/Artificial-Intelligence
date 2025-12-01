@@ -43,14 +43,17 @@ print(train_labels[0])
 # Using Sequential() to build layers one after another
 model = tf.keras.Sequential([
     # Flatten Layer that converts images to 1D array
-    tf.keras.layers.Flatten(), 
+    tf.keras.layers.Flatten(input_shape=(28, 28)),
 
     # Hidden Layer with 512 units and relu activation
-    tf.keras.layers.Dense(units=512, activation='relu'),
+    tf.keras.layers.Dense(units=16, activation='relu'),
 
     # Output Layer with 10 units for 10 classes and softmax activation
     tf.keras.layers.Dense(units=10, activation='softmax')
 ])
+
+print("\n--- Model Summary ---")
+model.summary()
 
 # === Part 4: Compiling the Model ===
 model.compile(
