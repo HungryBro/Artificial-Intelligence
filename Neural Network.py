@@ -52,8 +52,8 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(units=10, activation='softmax')
 ])
 
-print("\n--- Model Summary ---")
-model.summary()
+# print("\n--- Model Summary ---")
+# model.summary()
 
 # === Part 4: Compiling the Model ===
 model.compile(
